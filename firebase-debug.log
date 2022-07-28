@@ -1,0 +1,98 @@
+[debug] [2022-07-28T09:58:23.325Z] ----------------------------------------------------------------------
+[debug] [2022-07-28T09:58:23.326Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\monic\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-07-28T09:58:23.327Z] CLI Version:   11.4.0
+[debug] [2022-07-28T09:58:23.327Z] Platform:      win32
+[debug] [2022-07-28T09:58:23.327Z] Node Version:  v16.14.1
+[debug] [2022-07-28T09:58:23.336Z] Time:          Wed Jul 27 2022 22:58:23 GMT-1100 (GMT-11:00)
+[debug] [2022-07-28T09:58:23.337Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-28T09:58:23.404Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-28T09:58:23.405Z] > authorizing via signed-in user (smith.mnca@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\monic\OneDrive\Escritorio\firebase-project-recipes\firebase-recipes-web-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-07-28T09:59:32.876Z] Using project from CLI flag: fir-recipes-360ee
+[debug] [2022-07-28T09:59:32.879Z] > refreshing access token with scopes: []
+[debug] [2022-07-28T09:59:32.881Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-07-28T09:59:32.881Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-28T09:59:33.153Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-07-28T09:59:33.153Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-28T09:59:33.168Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-recipes-360ee [none]
+[debug] [2022-07-28T09:59:33.567Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-recipes-360ee 200
+[debug] [2022-07-28T09:59:33.567Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-recipes-360ee {"projectId":"fir-recipes-360ee","projectNumber":"894924047241","displayName":"firebase-recipes","name":"projects/fir-recipes-360ee","resources":{"hostingSite":"fir-recipes-360ee"},"state":"ACTIVE","etag":"1_efdd8b8d-6e5e-428c-b76e-d8eab02fc591"}
+[info] i  Using project fir-recipes-360ee (firebase-recipes) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at C:\Users\monic\OneDrive\Escritorio\firebase-project-recipes\firebase-recipes-web-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=946906857&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-07-28T10:00:50.683Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-07-28T10:00:50.683Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-07-28T10:00:50.990Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-07-28T10:00:50.991Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-07-28T10:00:50.999Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-07-28T10:00:51.272Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-07-28T10:00:51.272Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"mnca16","id":70614187,"node_id":"MDQ6VXNlcjcwNjE0MTg3","avatar_url":"https://avatars.githubusercontent.com/u/70614187?v=4","gravatar_id":"","url":"https://api.github.com/users/mnca16","html_url":"https://github.com/mnca16","followers_url":"https://api.github.com/users/mnca16/followers","following_url":"https://api.github.com/users/mnca16/following{/other_user}","gists_url":"https://api.github.com/users/mnca16/gists{/gist_id}","starred_url":"https://api.github.com/users/mnca16/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mnca16/subscriptions","organizations_url":"https://api.github.com/users/mnca16/orgs","repos_url":"https://api.github.com/users/mnca16/repos","events_url":"https://api.github.com/users/mnca16/events{/privacy}","received_events_url":"https://api.github.com/users/mnca16/received_events","type":"User","site_admin":false,"name":"Monica","company":null,"blog":"","location":"North Carolina","email":null,"hireable":null,"bio":"Web Developer Student","twitter_username":null,"public_repos":18,"public_gists":0,"followers":2,"following":6,"created_at":"2020-09-02T01:03:21Z","updated_at":"2022-06-29T14:38:51Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":1528,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as mnca16 
+[info] 
+[debug] [2022-07-28T10:02:09.591Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:09.754Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:09.754Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:26.046Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app /actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:26.227Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app /actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:26.227Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app /actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:41.829Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:42.033Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:42.033Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:42.762Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:42.900Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:42.900Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:43.067Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:43.237Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:43.237Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:43.359Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:43.556Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:43.556Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:43.587Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:43.745Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:43.781Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:43.781Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:43.888Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:43.892Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:43.893Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-07-28T10:02:44.032Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:44.077Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:44.077Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:44.166Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:44.166Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-07-28T10:02:44.175Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:44.320Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:44.320Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-28T10:02:46.202Z] >>> [apiv2][query] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key type=owner
+[debug] [2022-07-28T10:02:46.375Z] <<< [apiv2][status] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key 404
+[debug] [2022-07-28T10:02:46.375Z] <<< [apiv2][body] GET https://api.github.com/repos/mnca/firebase-recipes-web-app/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
