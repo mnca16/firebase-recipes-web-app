@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <div className="tittle-row">
         <h1 className="title"> Firebase Recipes </h1>
-        <h2> hello </h2>
       </div>
     </div>
   )
