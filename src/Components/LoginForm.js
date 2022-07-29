@@ -7,6 +7,7 @@ const LoginForm = ({ existingUser }) => {
   const [username, setUsername] = useState("")
   const [password, setPassWord] = useState("")
 
+  //Login
   async function handleSubmit(event) {
     event.preventDefault()
     try {
@@ -18,8 +19,24 @@ const LoginForm = ({ existingUser }) => {
     }
   }
 
+  //Logout
   function handleLogout() {
     FirebaseAuthService.logoutUser()
+  }
+
+  //Reset Email
+  async function handleSendResetPasswordEmail() {
+    if (!username) {
+      alert("Missing username")
+      return
+    }
+
+    try {
+      await FirebaseAuthService.sendPasswordResetEmail(username)
+      alert("send the password reset email")
+    } catch (error) {
+      alert(error.message)
+    }
   }
 
   return (
@@ -59,6 +76,13 @@ const LoginForm = ({ existingUser }) => {
           </label>
           <div className="button-box">
             <button className="primary-button">Login</button>
+            <button
+              type="button"
+              onClick={handleSendResetPasswordEmail}
+              className="primary-button"
+            >
+              Reset Password
+            </button>
           </div>
         </form>
       )}
