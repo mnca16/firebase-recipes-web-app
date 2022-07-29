@@ -1,6 +1,8 @@
 import { useState } from "react"
 import FirebaseAuthService from "../FirebaseAuthService"
 
+//This is a login form rather than a user creation form
+//I changed the registerUser function to loginUser
 const LoginForm = ({ existingUser }) => {
   const [username, setUsername] = useState("")
   const [password, setPassWord] = useState("")
@@ -8,7 +10,7 @@ const LoginForm = ({ existingUser }) => {
   async function handleSubmit(event) {
     event.preventDefault()
     try {
-      await FirebaseAuthService.registerUser(username, password)
+      await FirebaseAuthService.loginUser(username, password)
       setUsername("")
       setPassWord("")
     } catch (error) {
@@ -56,7 +58,7 @@ const LoginForm = ({ existingUser }) => {
             />
           </label>
           <div className="button-box">
-            <button className="primary-button">Submit</button>
+            <button className="primary-button">Login</button>
           </div>
         </form>
       )}
