@@ -19,6 +19,15 @@ const LoginForm = ({ existingUser }) => {
     }
   }
 
+  //Handle login with Google
+  async function handleLoginWithGoogle() {
+    try {
+      await FirebaseAuthService.loginWithGoogle()
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
   //Logout
   function handleLogout() {
     FirebaseAuthService.logoutUser()
@@ -82,6 +91,13 @@ const LoginForm = ({ existingUser }) => {
               className="primary-button"
             >
               Reset Password
+            </button>
+            <button
+              type="button"
+              onClick={handleLoginWithGoogle}
+              className="primary-button"
+            >
+              Loging with Google
             </button>
           </div>
         </form>
